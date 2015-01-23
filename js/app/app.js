@@ -2,7 +2,7 @@
 (function() {
   var app, cool, express, util, _;
 
-  require("better-require");
+  util = require("./utils");
 
   express = require("express");
 
@@ -11,8 +11,6 @@
   cool = require("cool-ascii-faces");
 
   _ = require("underscore");
-
-  util = require("./utils");
 
   app.get("/", function(request, response) {
     response.send(cool());
