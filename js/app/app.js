@@ -16,7 +16,7 @@
     response.send(cool());
   });
 
-  app.get("/hello", function(request, response) {
+  app.get("/coffee", function(request, response) {
     var a, array, nested;
     array = [];
     a = null;
@@ -37,7 +37,7 @@
       array.push(entry);
       a = util.getRevenue(5);
     });
-    response.send("hellosdfsdfdsf" + a);
+    response.send("welcome to coffee script/ js deploy on heroku" + a);
   });
 
   app.set("port", 5000);
