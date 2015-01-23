@@ -40,12 +40,12 @@
     response.send("welcome to coffee script/ js deploy on heroku" + a);
   });
 
-  app.set("port", 5000);
+  app.set("port", process.env.PORT || 5000);
 
   app.use(express["static"](__dirname + "/public"));
 
   app.listen(app.get("port"), function() {
-    return console.log("Node app is running at localhost:" + app.get("port"));
+    return console.log("Node app is running at :" + app.get("port"));
   });
 
   return;
