@@ -35,9 +35,8 @@
     ];
     _.each(nested, function(entry) {
       array.push(entry);
-      a = util.getRevenue(5);
     });
-    response.send("welcome to coffee script/ js deploy on heroku" + a);
+    response.send(util.getName(request.query.name));
   });
 
   app.set("port", process.env.PORT || 5001);
